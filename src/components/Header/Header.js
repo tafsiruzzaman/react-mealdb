@@ -1,19 +1,26 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import logo from '../../images/logo.png'
+import { NavLink } from 'react-router-dom';
+import logo from '../../images/logo.png';
+import './Header.css'
 
 const Header = () => {
+    const activeStyle = {
+        fontWeight: "bold"
+    };
     return (
         <div>
-            <Navbar bg="dark" variant="dark">
+            <Navbar className="bg-color">
             <Container>
-            <Navbar.Brand href="#home">
-                <img src={logo} width="130" height="40" className="d-inline-block align-top" alt="React Bootstrap logo"/>
-            </Navbar.Brand>
+            <NavLink to="/home">
+                <Navbar.Brand>
+                    <img src={logo} width="130" height="40" className="d-inline-block align-top" alt="React Bootstrap logo"/>
+                </Navbar.Brand>
+            </NavLink>
             <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
+                <NavLink activeStyle={activeStyle} className="text-decoration-none me-4 text-color" to="/home">Home</NavLink>
+                <NavLink activeStyle={activeStyle} className="text-decoration-none me-4 text-color" to="/meals">Meals</NavLink>
+                <NavLink activeStyle={activeStyle} className="text-decoration-none me-4 text-color" to="/catagories">Catagories</NavLink>
             </Nav>
             </Container>
             </Navbar>        
