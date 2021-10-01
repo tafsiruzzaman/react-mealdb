@@ -10,20 +10,23 @@ const Header = () => {
     };
     return (
         <div>
-            <Navbar className="bg-color">
-            <Container>
-            <NavLink to="/home">
-                <Navbar.Brand>
-                    <img src={logo} width="130" height="40" className="d-inline-block align-top" alt="React Bootstrap logo"/>
-                </Navbar.Brand>
-            </NavLink>
-            <Nav className="me-auto">
-                <NavLink activeStyle={activeStyle} className="text-decoration-none me-4 text-color" to="/home">Home</NavLink>
-                <NavLink activeStyle={activeStyle} className="text-decoration-none me-4 text-color" to="/meals">Meals</NavLink>
-                <NavLink activeStyle={activeStyle} className="text-decoration-none me-4 text-color" to="/categories">Categories</NavLink>
-            </Nav>
-            </Container>
-            </Navbar>        
+            <Navbar collapseOnSelect expand="lg" className="bg-color">
+                <Container>
+                    <NavLink to="/home">
+                        <Navbar.Brand>
+                            <img src={logo} width="130" height="40" className="d-inline-block align-top" alt="React Bootstrap logo"/>
+                        </Navbar.Brand>
+                    </NavLink>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto text-center">
+                            <NavLink activeStyle={activeStyle} className="text-decoration-none my-2 me-4 text-color" to="/home">Home</NavLink>
+                            <NavLink activeStyle={activeStyle} className="text-decoration-none my-2 me-4 text-color" to="/meals">Meals</NavLink>
+                            <NavLink activeStyle={activeStyle} className="text-decoration-none my-2 me-4 text-color" to="/categories">Categories</NavLink>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>      
         </div>
     );
 };
