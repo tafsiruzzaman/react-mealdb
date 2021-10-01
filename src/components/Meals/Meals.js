@@ -15,11 +15,11 @@ const Meals = () => {
         .then(data => setMeals(data.meals))
     }, [searchText])
     return (
-        <div className="container">
+        <div className="container mb-5">
             <InputGroup onChange={handelInput} className="my-3 w-75 mx-auto">
                 <FormControl placeholder="search food"/>
             </InputGroup>
-            <Row xs={1} md={3} lg={4} className="gy-4 gx-lg-4">
+            <Row xs={1} md={2} lg={4} className="gy-4 gx-lg-4">
                 {
                     meals.map(meal => <Meal key={meal.idMeal} meal={meal}></Meal>)
                 }

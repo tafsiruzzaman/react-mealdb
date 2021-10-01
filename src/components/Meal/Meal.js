@@ -1,4 +1,3 @@
-import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -13,7 +12,7 @@ const Meal = (props) => {
                     <Card.Body>
                         <Card.Title>{strMeal}</Card.Title>
                         <Card.Text>
-                            {strInstructions.slice(0, 100)}
+                            {strInstructions?.slice(0, 100)}
                         </Card.Text>
                         <Card.Text>
                             Area: {strArea}

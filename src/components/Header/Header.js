@@ -20,7 +20,7 @@ const Header = () => {
             <Nav className="me-auto">
                 <NavLink activeStyle={activeStyle} className="text-decoration-none me-4 text-color" to="/home">Home</NavLink>
                 <NavLink activeStyle={activeStyle} className="text-decoration-none me-4 text-color" to="/meals">Meals</NavLink>
-                <NavLink activeStyle={activeStyle} className="text-decoration-none me-4 text-color" to="/catagories">Catagories</NavLink>
+                <NavLink activeStyle={activeStyle} className="text-decoration-none me-4 text-color" to="/categories">Categories</NavLink>
             </Nav>
             </Container>
             </Navbar>        

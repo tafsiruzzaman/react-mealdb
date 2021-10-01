@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Meals from './components/Meals/Meals';
-import Catagories from './components/Categories/Catagories';
 import NotFound from './components/NotFound/NotFound';
 import MealDetail from './components/MealDetail/MealDetail';
+import Categories from './components/Categories/Categories';
+import CategoryDetails from './components/CategoryDetails/CategoryDetails';
 
 
 function App() {
@@ -27,8 +28,11 @@ function App() {
           <Route path="/meal/:mealId">
             <MealDetail></MealDetail>
           </Route>
-          <Route path="/catagories">
-            <Catagories></Catagories>
+          <Route path="/category/:categoryName">
+            <CategoryDetails></CategoryDetails>
+          </Route>
+          <Route path="/categories">
+            <Categories></Categories>
           </Route>
           <Route path="*">
             <NotFound></NotFound>
